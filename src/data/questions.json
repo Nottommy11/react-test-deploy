@@ -1,0 +1,50 @@
+[
+	{
+			"question" : "What is the dotted decimal representation of a /24 subnet mask?",
+			"choiceA" : "255.255.255.224",
+			"choiceB" : "255.255.255.0",
+			"choiceC" : "255.255.0.0",
+			"choiceD" : "255.255.224.0",
+			"correct" : "B"
+			},
+			{
+			"question" : "What is the binary representation of a /24 subnet mask?",
+			"choiceA" : "11111111.11111111.11100000.00000000",
+			"choiceB" : "11111111.11111111.11111111.00000000",
+			"choiceC" : "11111111.11111111.00000000.00000000",
+			"choiceD" : "11111111.11110000.11111111.00000000",
+			"correct" : "B"
+			},
+			{
+			"question" : "What is the slash notation for subnet mask 255.255.255.0?",
+			"choiceA" : "/27",
+			"choiceB" : "/26",
+			"choiceC" : "/24",
+			"choiceD" : "/20",
+			"correct" : "C"
+			},
+			{
+			"question" : "Which of the following represent a layer 2 MAC address?",
+			"choiceA" : "192.168.1.1",
+			"choiceB" : "3a:6d:2e:77:9b:14",
+			"choiceC" : "255.255.255.0",
+			"choiceD" : "802.11",
+			"correct" : "B"
+			},
+			{
+			"question" : "Which of the following represent a layer 3 IP address?",
+			"choiceA" : "192.168.1.1",
+			"choiceB" : "3a:6d:2e:77:9b:14",
+			"choiceC" : "255.255.255.0",
+			"choiceD" : "802.11",
+			"correct" : "A"
+			},
+			{
+			"question" : "Which cable would you use to perform initial configurations?",
+			"choiceA" : "network cable",
+			"choiceB" : "crossover cable",
+			"choiceC" : "console cable",
+			"choiceD" : "straight-through cable",
+			"correct" : "C"
+			}
+]
