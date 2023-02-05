@@ -29,15 +29,9 @@
   justify-content: center;
   align-items: center;
   height: 6rem;
-  cursor: pointer;
-}
-
-.nav-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 6rem;
   gap: 2rem;
+
+  cursor: pointer;
 }
 
 .nav-logo:hover {

@@ -19,6 +19,7 @@ import Quizzes from "./routes/quizzes";
 import ErrorPage from "./routes/error";
 
 import "./index.css";
+import "./styles/grid-cards.css";
 
 const AppLayout = () => {
   return (
