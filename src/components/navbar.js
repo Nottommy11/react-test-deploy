@@ -20,19 +20,16 @@ export default function Navbar() {
 
   const closeInfoMobileMenu = () => setInfoClick(false);
 
-  const screenWidth = window.addEventListener("resize", () => {
-    return window.innerWidth;
-  });
+  const closeBothMobileMenu = () => {
+    closeAllMobileMenu();
+    closeInfoMobileMenu();
+  };
 
   return (
     <IconContext.Provider value={{ color: "#fff" }}>
       <nav className="top-nav">
         <div className="nav-container">
-          <Link
-            to="/"
-            className="nav-logo"
-            onClick={({ closeAllMobileMenu }, { closeInfoMobileMenu })}
-          >
+          <Link to="/" className="nav-logo" onClick={closeBothMobileMenu}>
             <img className="nav-img" src={iconImg} alt="Nettie Icon" />
             Nettie
           </Link>
@@ -47,7 +44,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
-                  onClick={({ closeAllMobileMenu }, { closeInfoMobileMenu })}
+                  onClick={closeBothMobileMenu}
                 >
                   Flashcards
                 </NavLink>
@@ -58,7 +55,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
-                  onClick={({ closeAllMobileMenu }, { closeInfoMobileMenu })}
+                  onClick={closeBothMobileMenu}
                 >
                   Games
                 </NavLink>
@@ -69,7 +66,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     "nav-links" + (isActive ? " activated" : "")
                   }
-                  onClick={({ closeAllMobileMenu }, { closeInfoMobileMenu })}
+                  onClick={closeBothMobileMenu}
                 >
                   Quizzes
                 </NavLink>
@@ -87,7 +84,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     "nav-links nav-info-links" + (isActive ? " activated" : "")
                   }
-                  onClick={({ closeAllMobileMenu }, { closeInfoMobileMenu })}
+                  onClick={closeBothMobileMenu}
                 >
                   About
                 </NavLink>
@@ -98,8 +95,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     "nav-links nav-info-links" + (isActive ? " activated" : "")
                   }
-                  onClick={({ closeAllMobileMenu }, { closeInfoMobileMenu })}
-                  onResize={{}}
+                  onClick={closeBothMobileMenu}
                 >
                   Contact
                 </NavLink>

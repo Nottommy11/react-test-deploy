@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createRoot } from "react-dom/client";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Route,
   Link,
@@ -29,23 +29,23 @@ const AppLayout = () => {
   );
 };
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <AppLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/react-test-deploy/", element: <Home /> },
-      { path: "/react-test-deploy/", element: <About /> },
-      { path: "/react-test-deploy/", element: <Contact /> },
-      { path: "/react-test-deploy/", element: <Flashcards /> },
-      { path: "/react-test-deploy/", element: <Games /> },
-      { path: "/react-test-deploy/", element: <Quizzes /> },
+      { path: "/", element: <Home /> },
+      { path: "/about", element: <About /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/flashcards", element: <Flashcards /> },
+      { path: "/games", element: <Games /> },
+      { path: "/quizzes", element: <Quizzes /> },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <>
+  <React.StrictMode>
     <RouterProvider router={router} />
-  </>
+  </React.StrictMode>
 );
