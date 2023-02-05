@@ -1,0 +1,205 @@
+#flashcard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  padding: 4rem;
+}
+
+.flashcard-container {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flashcard-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-color: var(--darkest-blue);
+  opacity: 0.98;
+  border-radius: 10px;
+  user-select: none;
+  color: var(--yellow);
+}
+
+.flashcard-form {
+  display: grid;
+  align-items: center;
+  margin-top: 4rem;
+  width: 20rem;
+}
+
+.flashcard-form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+.flashcard-form-group > label {
+  color: var(--yellow);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+#flashcard-difficulty {
+  padding: 0.5rem;
+  border-radius: 0.3em;
+  background-color: var(--light-text);
+  color: var(--darkest-blue);
+}
+
+#flashcard-difficulty > option {
+  background-color: var(--light-text);
+  color: var(--darkest-blue);
+}
+
+#flashcard-amount {
+  padding: 0.5rem;
+  border-radius: 0.3em;
+  background-color: var(--light-text);
+  color: var(--darkest-blue);
+  border: none;
+}
+
+.flashcard-submit-btn {
+  display: flex;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  opacity: 0.98;
+  color: var(--yellow);
+  padding: 0.5em 1em;
+  margin-top: 1rem;
+  border-radius: 0.3em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.flashcard-submit-btn:hover {
+  background-color: var(--darkest-blue);
+}
+
+.flashcard-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+}
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+    translateY(var(--translate-y, 0));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.card:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card.flip {
+  --rotate-y: 180deg;
+}
+
+.card .front {
+  left: 0;
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  padding: 1rem;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.flashcard-options {
+  margin-top: 0.5rem;
+}
+
+.flashcard-option {
+  margin-top: 0.25rem;
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.flashcard-option:first-child {
+  margin-top: 0;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

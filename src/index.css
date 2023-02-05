@@ -31,6 +31,10 @@ html {
   overflow: overlay;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--light-text);
@@ -42,7 +46,6 @@ body {
       var(--darker-blue)
     ),
     100%;
-  min-height: 100vh;
   color: var(--light-text);
 }
 

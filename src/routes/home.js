@@ -33,7 +33,7 @@ function createCards(num) {
   return cards;
 }
 
-function Home() {
+export default function Home() {
   return (
     <section id="home">
       <div className="grid-header">Recently Added!</div>
@@ -50,5 +50,3 @@ function Home() {
     </section>
   );
 }
-
-export default Home;

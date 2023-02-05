@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# nettie
+Networking I Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an attempt to gamify the concepts from the Networking I class.  It will cover MAC addresses, IP addresses, subnetting, the OSI model, basic header questions, basic command questions, ANDing, magic number and anything we can think of to jam in there to help introduce students new to learning networking or brushing up on skills before Networking II.
 
-## Available Scripts
+Check out the [current deployment!][Deployment]
 
-In the project directory, you can run:
+---
+## Outline
 
-### `npm start`
+- [nettie](#nettie)
+	- [Outline](#outline)
+		- [Minimum Viable Product](#minimum-viable-product)
+		- [Hopes \& Dreams](#hopes--dreams)
+		- [Further Documentation](#further-documentation)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Minimum Viable Product
+<div name="minimum-viable-product"/>
 
-### `npm test`
+This section outlines what this website has to at least accomplish to provide use to visitors.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users are able to:
+- [ ] Choose a quiz
+---
 
-### `npm run build`
+### Hopes & Dreams
+<div name="hopes-dreams"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This section outlines what I hope to get to with this project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ ] API storage of questions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+### Further Documentation
+<div name="documentation"/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will include information about how I would like this project to look and perhaps some resources that helped me along the way.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Deployment]: https://jewynia.github.io/nettie/
