@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-test-deploy/static/css/main.da5cf2fc.css",
-    "main.js": "/react-test-deploy/static/js/main.4d533413.js",
+    "main.css": "/react-test-deploy/static/css/main.a6221e27.css",
+    "main.js": "/react-test-deploy/static/js/main.96eb6d4f.js",
     "static/media/network-cables.jpg": "/react-test-deploy/static/media/network-cables.9e322f2957cd8a6b6e4d.jpg",
     "static/media/networking.svg": "/react-test-deploy/static/media/networking.bdea87004732c3c4f49c19a79350143e.svg",
     "index.html": "/react-test-deploy/index.html",
-    "main.da5cf2fc.css.map": "/react-test-deploy/static/css/main.da5cf2fc.css.map",
-    "main.4d533413.js.map": "/react-test-deploy/static/js/main.4d533413.js.map"
+    "main.a6221e27.css.map": "/react-test-deploy/static/css/main.a6221e27.css.map",
+    "main.96eb6d4f.js.map": "/react-test-deploy/static/js/main.96eb6d4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.da5cf2fc.css",
-    "static/js/main.4d533413.js"
+    "static/css/main.a6221e27.css",
+    "static/js/main.96eb6d4f.js"
   ]
 }
