@@ -1,10 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import FlashcardSlider from "./flashcardComponents/flashcardSlider";
 import axios from "axios";
+import { FaTimes } from "react-icons/fa";
 
 export default function Flashcards() {
   const [flashcards, setFlashcards] = useState([]);
   const [difficulties, setDifficulties] = useState([]);
+  const [displayCard, setDisplayCard] = useState(false);
+
+  const handleCardClick = () => setDisplayCard(!displayCard);
+
+  const closeCard = () => setDisplayCard(false);
 
   const difficultyEl = useRef();
   const amountEl = useRef();
@@ -46,6 +52,7 @@ export default function Flashcards() {
           })
         );
       });
+    handleCardClick();
   }
 
   return (
@@ -53,36 +60,42 @@ export default function Flashcards() {
       <section id="flashcard">
         <div className="flashcard-container">
           <div className="flashcard-header">Flashcards</div>
-          <form className="flashcard-form" onSubmit={handleSubmit}>
-            <div className="flashcard-form-group">
-              <label htmlFor="flashcard-difficulty">Difficulty</label>
-              <select id="flashcard-difficulty" ref={difficultyEl}>
-                {difficulties.map((difficulty) => {
-                  return (
-                    <option value={difficulty} key={difficulty}>
-                      {difficulty}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-            <div className="flashcard-form-group">
-              <label htmlFor="flashcard-amount">Number of questions</label>
-              <input
-                type="number"
-                id="flashcard-amount"
-                min="1"
-                step="1"
-                defaultValue={10}
-                ref={amountEl}
-              />
-            </div>
-            <div className="flashcard-form-group">
-              <button className="flashcard-submit-btn">Generate</button>
-            </div>
-          </form>
           <div className="flashcard-wrapper">
-            <FlashcardSlider flashcards={flashcards} />
+            {displayCard ? (
+              <>
+                <FaTimes className="flashcard-close-icon" onClick={closeCard} />
+                <FlashcardSlider flashcards={flashcards} />
+              </>
+            ) : (
+              <form className="flashcard-form" onSubmit={handleSubmit}>
+                <div className="flashcard-form-group">
+                  <label htmlFor="flashcard-difficulty">Difficulty</label>
+                  <select id="flashcard-difficulty" ref={difficultyEl}>
+                    {difficulties.map((difficulty) => {
+                      return (
+                        <option value={difficulty} key={difficulty}>
+                          {difficulty}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+                <div className="flashcard-form-group">
+                  <label htmlFor="flashcard-amount">Number of questions</label>
+                  <input
+                    type="number"
+                    id="flashcard-amount"
+                    min="1"
+                    step="1"
+                    defaultValue={10}
+                    ref={amountEl}
+                  />
+                </div>
+                <div className="flashcard-form-group">
+                  <button className="flashcard-submit-btn">Generate</button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </section>
