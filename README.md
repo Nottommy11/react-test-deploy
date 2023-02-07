@@ -99,6 +99,19 @@ YOU DON'T NEED TO ENTER THESE COMMANDS. `npm install` should install them for yo
 
 - `npm install axios` - Used for API calls.
 
+- `npm install express` - Used for API calls.
+
+- `npm install --save-dev nodemon` - Used for API calls.
+
+- `npm install mongoose` - Used for MongoDB database.
+
+- `npm install dotenv` - Used for environment variables.
+
+- `npm install @hapi/joi` - Used for validation.
+
+- `npm install bcryptjs` - Used for hashing passwords.
+
+- `npm install jsonwebtoken` - Used for authentication.
 
 #### Visual Studio Code Extensions
 <div name="vscode-extensions"/>
