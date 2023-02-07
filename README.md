@@ -1,8 +1,6 @@
-# Nettie
+# Nettie, A Networking Game
 
-Networking I, II, III, & IV Game
-
- This project is a gamification of concepts from the Networking classes at Wayne Stat College.
+ This project is a gamification of concepts from the Networking I, II, III, & IV classes at Wayne Stat College.
 
  Check out the [current deployment!][Deployment]
 
