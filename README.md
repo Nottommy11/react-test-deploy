@@ -16,6 +16,7 @@
 			- [Commands](#commands)
 			- [Dependencies](#dependencies)
 			- [Visual Studio Code Extensions](#visual-studio-code-extensions)
+			- [React Deployment With React Router](#react-deployment-with-react-router)
 
 ---
 
@@ -95,7 +96,7 @@ YOU DON'T NEED TO ENTER THESE COMMANDS. `npm install` should install them for yo
 
 - `npm install react-icons` - Used for icons in React.
 
-- `npm install gh-pages` - Used for deployment to GitHub Pages.
+- `npm install gh-pages --save-dev` - Used for deployment to GitHub Pages.
 
 - `npm install axios` - Used for API calls.
 
@@ -162,6 +163,45 @@ This section outlines the extensions I use for this project. These are very help
 
 - `Material Icon Theme` - Used for icons.
 
+
+#### React Deployment With React Router
+<div name="react-deployment"/>
+
+This section outlines how I deployed this project to GitHub Pages.
+
+- Create a new repository on GitHub.
+
+- Create a new React project with `npx create-react-app <project-name>`.
+
+- Set up GitHub Pages in the repository settings. Initial branch should be `main`.
+
+- `npm install gh-pages --save-dev` - Install the `gh-pages` dependency.
+
+- Add the following to the `package.json` file:
+
+```json
+"homepage": "https://<username>.github.io/<project-name>",
+"scripts": {
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build"
+}
+```
+
+- `npm run deploy` - Build the project and deploy it to GitHub Pages.
+
+- Change the `main` branch to `gh-pages` in the repository settings.
+
+React alone should be working at this point
+
+- `npm install react-router-dom` - Install the `react-router-dom` dependency.
+
+- Make sure to import `HashRouter` instead of `BrowserRouter` or `Router` in `index.js`:
+
+```js
+import { HashRouter } from 'react-router-dom';
+```
+
+This will add a "#" to the URL. This is necessary for GitHub Pages to work with React Router.
 
 [Deployment]: https://nottommy11.github.io/react-test-deploy
 [GitHubEducation]: https://education.github.com/pack
