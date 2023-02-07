@@ -13,6 +13,9 @@
 		- [Minimum Viable Product](#minimum-viable-product)
 		- [Hopes \& Dreams](#hopes--dreams)
 		- [Further Documentation](#further-documentation)
+			- [Commands](#commands)
+			- [Dependencies](#dependencies)
+			- [Visual Studio Code Extensions](#visual-studio-code-extensions)
 
 ---
 
@@ -70,7 +73,82 @@ This section outlines what I hope to get to with this project.
 
 This will include information about how I would like this project to look and perhaps some resources that helped me along the way.
 
+#### Commands
+<div name="commands"/>
 
+This section outlines the commands I use to run this project.
+
+- `npm install` - Installs the dependencies for this project.
+
+- `npm start` - Runs the app in the development mode.
+
+- `npm deploy` - Builds the app for production to the `build` folder. This updates the GitHub Pages deployment.
+
+#### Dependencies
+<div name="dependencies"/>
+
+This section outlines the dependencies I use for this project and the command used to install them. They should also be included in the `package.json` file.
+
+YOU DON'T NEED TO ENTER THESE COMMANDS. `npm install` should install them for you.
+
+- `npm install react-router-dom` - Used for routing in React.
+
+- `npm install react-icons` - Used for icons in React.
+
+- `npm install gh-pages` - Used for deployment to GitHub Pages.
+
+- `npm install axios` - Used for API calls.
+
+
+#### Visual Studio Code Extensions
+<div name="vscode-extensions"/>
+
+This section outlines the extensions I use for this project. These are very helpful for web-development.
+
+- `ESLint` - Used for linting JavaScript.
+
+- `Prettier` - Used for formatting Code.
+
+- `Live Server` - Used for running a local server. Although isn't used with React
+
+- `GitHub Copilot` - Used for code suggestions. This is a new feature that is still in beta. Can be free with a student email address [here][GitHubEducation].
+
+- `Tabnine` - Used for code suggestions. This is a new feature that is still in beta. Free Alternative to GitHub Copilot.
+
+- `GitLens` - Used for git information. 
+
+- `GitHub Repositories` - Used for GitHub information. 
+
+- `Indent Rainbow` - Used for indenting. 
+
+- `Path Intellisense` - Used for path suggestions. 
+
+- `ES7 React/Redux/GraphQL/React-Native snippets` - Used for React snippets. 
+
+- `Code Spell Checker` - Used for spell checking. 
+
+- `REST Client` - Used for testing API calls. 
+
+- `Polacode` - Used for taking screenshots of code. 
+
+- `Import Cost` - Used for seeing the size of imports. 
+
+- `Highlight Matching Tag` - Used for highlighting matching tags. 
+
+- `Auto Rename Tag` - Used for renaming matching tags. 
+
+- `Auto Close Tag` - Used for closing matching tags. 
+
+- `Advanced New File` - Used for creating new files. 
+
+- `vscode-pets` - Used for a cute pet. 
+
+- `WakaTime` - Used for tracking time spent on projects.
+
+- `SynthWave '84` - Used for a cool theme.
+
+- `Material Icon Theme` - Used for icons.
 
 
 [Deployment]: https://nottommy11.github.io/react-test-deploy
+[GitHubEducation]: https://education.github.com/pack
