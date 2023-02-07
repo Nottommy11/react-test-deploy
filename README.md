@@ -7,10 +7,7 @@
 ---
 ## Outline
 
-- [Nettie](#nettie)
-		- [Networking I Game](#networking-i-game)
-			- [This project is a gamification of concepts from the Networking classes at Wayne Stat College.](#this-project-is-a-gamification-of-concepts-from-the-networking-classes-at-wayne-stat-college)
-			- [Check out the current deployment!](#check-out-the-current-deployment)
+- [Nettie, A Networking Game](#nettie-a-networking-game)
 	- [Outline](#outline)
 		- [Concepts Covered](#concepts-covered)
 		- [Minimum Viable Product](#minimum-viable-product)
