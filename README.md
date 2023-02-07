@@ -1,16 +1,18 @@
 # Nettie
 
-## Networking I Game
+### Networking I Game
 
-This project is a gamification of concepts from the Networking classes at Wayne Stat College.
+#### This project is a gamification of concepts from the Networking classes at Wayne Stat College.
 
-Check out the [current deployment!][Deployment]
+#### Check out the [current deployment!][Deployment]
 
 ---
 ## Outline
 
 - [Nettie](#nettie)
-	- [Networking I Game](#networking-i-game)
+		- [Networking I Game](#networking-i-game)
+			- [This project is a gamification of concepts from the Networking classes at Wayne Stat College.](#this-project-is-a-gamification-of-concepts-from-the-networking-classes-at-wayne-stat-college)
+			- [Check out the current deployment!](#check-out-the-current-deployment)
 	- [Outline](#outline)
 		- [Concepts Covered](#concepts-covered)
 		- [Minimum Viable Product](#minimum-viable-product)
