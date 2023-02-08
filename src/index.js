@@ -12,7 +12,7 @@ import Navbar from "./components/navbar";
 
 import Home from "./routes/home";
 import About from "./routes/about";
-import Contact from "./routes/contact";
+import Profile from "./routes/profile";
 import Flashcards from "./routes/flashcards";
 import Games from "./routes/games";
 import Quizzes from "./routes/quizzes";
@@ -21,6 +21,7 @@ import ErrorPage from "./routes/error";
 import "./index.css";
 import "./styles/gridCards.css";
 import "./styles/flashcards.css";
+import "./styles/about.css";
 
 const AppLayout = () => {
   return (
@@ -38,7 +39,7 @@ const router = createHashRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
-      { path: "/contact", element: <Contact /> },
+      { path: "/profile", element: <Profile /> },
       { path: "/flashcards", element: <Flashcards /> },
       { path: "/games", element: <Games /> },
       { path: "/quizzes", element: <Quizzes /> },

@@ -91,13 +91,13 @@ export default function Navbar() {
               </li>
               <li className="nav-item nav-info-item">
                 <NavLink
-                  to="/contact"
+                  to="/profile"
                   className={({ isActive }) =>
                     "nav-links nav-info-links" + (isActive ? " activated" : "")
                   }
                   onClick={closeBothMobileMenu}
                 >
-                  Contact
+                  Profile
                 </NavLink>
               </li>
             </ul>
