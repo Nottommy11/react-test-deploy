@@ -25,6 +25,7 @@ export default function Flashcards() {
     return textArea.value;
   }
 
+  /*   //Questions: https://opentdb.com/api_config.php
   function handleSubmit(e) {
     e.preventDefault();
     axios
@@ -40,6 +41,32 @@ export default function Flashcards() {
             const answer = decodeString(questionItem.correct_answer);
             const options = [
               ...questionItem.incorrect_answers.map((a) => decodeString(a)),
+              answer,
+            ];
+
+            return {
+              id: `${index}-${Date.now()}`,
+              question: decodeString(questionItem.question),
+              answer: answer,
+              options: options.sort(() => Math.random() - 0.5),
+            };
+          })
+        );
+      });
+    handleCardClick();
+  } */
+
+  //Questions: https://opentdb.com/api_config.php
+  function handleSubmit(e) {
+    e.preventDefault();
+    axios
+      .get("https://nettie-test-api-deploy.herokuapp.com/questionData/Mod1")
+      .then((res) => {
+        setFlashcards(
+          res.data.map((questionItem, index) => {
+            const answer = decodeString(questionItem.answers[0]);
+            const options = [
+              ...questionItem.incorrectAnswers.map((a) => decodeString(a)),
               answer,
             ];
 
