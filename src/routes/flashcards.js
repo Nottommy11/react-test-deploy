@@ -12,11 +12,13 @@ export default function Flashcards() {
 
   const closeCard = () => setDisplayCard(false);
 
+  /*   const difficultyEl = useRef();
+  const amountEl = useRef(); */
+
   const difficultyEl = useRef();
-  const amountEl = useRef();
 
   useEffect(() => {
-    setDifficulties(["easy", "medium", "hard"]);
+    setDifficulties(["Fundies 1", "Fundies 2", "Module 1", "Module 2"]);
   }, []);
 
   function decodeString(str) {
@@ -56,11 +58,15 @@ export default function Flashcards() {
     handleCardClick();
   } */
 
-  //Questions: https://opentdb.com/api_config.php
   function handleSubmit(e) {
     e.preventDefault();
     axios
-      .get("https://nettie-test-api-deploy.herokuapp.com/questionData/Mod1")
+      .get(
+        `https://nettie-test-api-deploy.herokuapp.com/questionData/${difficultyEl.current.value.replace(
+          " ",
+          ""
+        )}`
+      )
       .then((res) => {
         setFlashcards(
           res.data.map((questionItem, index) => {
@@ -96,7 +102,7 @@ export default function Flashcards() {
             ) : (
               <form className="flashcard-form" onSubmit={handleSubmit}>
                 <div className="flashcard-form-group">
-                  <label htmlFor="flashcard-difficulty">Difficulty</label>
+                  <label htmlFor="flashcard-difficulty">Concepts</label>
                   <select id="flashcard-difficulty" ref={difficultyEl}>
                     {difficulties.map((difficulty) => {
                       return (
@@ -107,6 +113,7 @@ export default function Flashcards() {
                     })}
                   </select>
                 </div>
+                {/* 
                 <div className="flashcard-form-group">
                   <label htmlFor="flashcard-amount">Number of questions</label>
                   <input
@@ -118,6 +125,7 @@ export default function Flashcards() {
                     ref={amountEl}
                   />
                 </div>
+                 */}
                 <div className="flashcard-form-group">
                   <button className="flashcard-submit-btn">Generate</button>
                 </div>
