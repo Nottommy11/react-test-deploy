@@ -60,7 +60,7 @@ Users are able to:
 
 This section outlines what I hope to get to with this project.
 
-- [ ] Use an API to get the questions
+- [X] Use an API to get the questions
 - [ ] Use an API for Login and Registration
 - [ ] Use a database to store user information and scores
 - [ ] Use a database for the questions
