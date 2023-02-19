@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <>
       <Login />
-      <section id="profile"></section>
+      <section id="profile">Profile Page</section>
     </>
   );
 }

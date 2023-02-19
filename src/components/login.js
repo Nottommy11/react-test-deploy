@@ -33,6 +33,9 @@ export default function Login() {
   const [userFocus, setUserFocus] = useState(false);
 
   const [hasAccount, setHasAccount] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const [usernameExists, setUsernameExists] = useState(false);
 
   useEffect(() => {
     emailRef.current.focus();
@@ -43,16 +46,18 @@ export default function Login() {
   }, [email]);
 
   useEffect(() => {
+    setUsernameExists(false);
     setValidUser(USER_REGEX.test(user));
   }, [user]);
 
   useEffect(() => {
     if (hasAccount) {
       emailRef.current.focus();
-    } else {
+    }
+    if (!hasAccount && !loggedIn) {
       userRef.current.focus();
     }
-  }, [hasAccount]);
+  }, [hasAccount, loggedIn]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,76 +76,103 @@ export default function Login() {
           localStorage.setItem("username", login.username);
           localStorage.setItem("email", login.email);
           console.log("Login Successful");
+          setLoggedIn(true);
           return;
         }
       });
-      setHasAccount(false);
+      if (!loggedIn) {
+        setHasAccount(false);
+      }
     } else {
-      return;
+      //Check if username already exists
+      logins.forEach((login) => {
+        if (login.username === user) {
+          console.log("Username already exists");
+          setUsernameExists(true);
+          return;
+        }
+      });
+      // If username doesn't exist, register
+      if (!usernameExists) {
+        localStorage.setItem("username", user);
+        localStorage.setItem("email", email);
+        console.log("Registration Successful");
+        setLoggedIn(true);
+        return;
+      }
     }
   };
 
   return (
     <>
-      <div className="login-modal-bg"></div>
-      <div className="login-modal-container">
-        <div className="login-modal-header">Login/Register</div>
-        <div className="login-modal-wrapper">
-          <form className="login-modal-form" onSubmit={handleSubmit}>
-            <div className="login-modal-form-group">
-              <label htmlFor="email">
-                Email:
-                <AiFillCheckCircle
-                  className={validEmail ? "valid" : "hide"}
-                />{" "}
-                <AiFillCloseCircle
-                  className={validEmail || !email ? "hide" : "invalid"}
-                />
-              </label>
-              <input
-                type="email"
-                id="email"
-                ref={emailRef}
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-                required
-                onFocus={() => setEmailFocus(true)}
-                onBlur={() => setEmailFocus(false)}
-              />
-            </div>
-            {hasAccount ? null : (
-              <div className="login-modal-form-group">
-                <label htmlFor="username">
-                  Username:
-                  <AiFillCheckCircle
-                    className={validUser ? "valid" : "hide"}
-                  />{" "}
-                  <AiFillCloseCircle
-                    className={validUser || !user ? "hide" : "invalid"}
+      {loggedIn ? null : (
+        <>
+          <div className="login-modal-bg"></div>
+          <div className="login-modal-container">
+            <div className="login-modal-header">Login/Register</div>
+            <div className="login-modal-wrapper">
+              <form className="login-modal-form" onSubmit={handleSubmit}>
+                <div className="login-modal-form-group">
+                  <label htmlFor="email">
+                    Email:
+                    <AiFillCheckCircle
+                      className={validEmail ? "valid" : "hide"}
+                    />{" "}
+                    <AiFillCloseCircle
+                      className={validEmail || !email ? "hide" : "invalid"}
+                    />
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    ref={emailRef}
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    required
+                    onFocus={() => setEmailFocus(true)}
+                    onBlur={() => setEmailFocus(false)}
                   />
-                </label>
-                <input
-                  type="text"
-                  id="username"
-                  ref={userRef}
-                  autoComplete="off"
-                  onChange={(e) => setUser(e.target.value)}
-                  value={user}
-                  required
-                  onFocus={() => setUserFocus(true)}
-                  onBlur={() => setUserFocus(false)}
-                />
-              </div>
-            )}
+                </div>
+                {hasAccount ? null : (
+                  <div className="login-modal-form-group">
+                    <label htmlFor="username">
+                      Username:
+                      <AiFillCheckCircle
+                        className={validUser ? "valid" : "hide"}
+                      />{" "}
+                      <AiFillCloseCircle
+                        className={validUser || !user ? "hide" : "invalid"}
+                      />
+                      <div
+                        className={usernameExists ? "username-exists" : "hide"}
+                      >
+                        *Username Already Exists
+                      </div>
+                    </label>
+                    <input
+                      type="text"
+                      id="username"
+                      ref={userRef}
+                      autoComplete="off"
+                      onChange={(e) => setUser(e.target.value)}
+                      value={user}
+                      required={hasAccount ? false : true}
+                      onFocus={() => setUserFocus(true)}
+                      onBlur={() => setUserFocus(false)}
+                    />
+                  </div>
+                )}
 
-            <div className="login-modal-form-group">
-              <button className="login-modal-submit-btn">
-                {hasAccount ? "Login" : "Register"}
-              </button>
+                <div className="login-modal-form-group">
+                  <button className="login-modal-submit-btn">
+                    {hasAccount ? "Login" : "Register"}
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-      </div>
+          </div>
+        </>
+      )}
     </>
   );
 }

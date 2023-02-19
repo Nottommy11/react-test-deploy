@@ -80,6 +80,12 @@
   margin-left: 1rem;
 }
 
+.username-exists {
+  color: var(--red);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
 .login-modal-form-group input {
   width: 20rem;
   height: 2rem;

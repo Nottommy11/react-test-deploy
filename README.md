@@ -50,8 +50,8 @@ Users are able to:
 - [ ] Choose flashcards based on level, concept, and amount
 - [ ] Choose different types of games based on level and concept
 - [ ] Choose quizzes based on level and concept
-- [ ] Learn about this project in the About section
-- [ ] Learn who to contact for this project
+- [X] Learn about this project in the About section
+- [X] Learn who to contact for this project
 
 ---
 
