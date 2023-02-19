@@ -5,7 +5,7 @@ import "./login.css";
 const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const USER_REGEX = /^[a-zA-Z0-9-_]{3,23}$/;
 
-let logins;
+let logins = [];
 
 async function fetchLogins() {
   const response = await fetch(
@@ -48,7 +48,13 @@ export default function Login() {
   useEffect(() => {
     setUsernameExists(false);
     setValidUser(USER_REGEX.test(user));
-  }, [user]);
+    logins.forEach((login) => {
+      if (login.username === user) {
+        console.log("Username already exists");
+        setUsernameExists(true);
+      }
+    });
+  }, [user, setUsernameExists, usernameExists]);
 
   useEffect(() => {
     if (hasAccount) {
@@ -84,16 +90,9 @@ export default function Login() {
         setHasAccount(false);
       }
     } else {
-      //Check if username already exists
-      logins.forEach((login) => {
-        if (login.username === user) {
-          console.log("Username already exists");
-          setUsernameExists(true);
-          return;
-        }
-      });
       // If username doesn't exist, register
       if (!usernameExists) {
+        console.log(usernameExists);
         localStorage.setItem("username", user);
         localStorage.setItem("email", email);
         console.log("Registration Successful");
@@ -162,7 +161,6 @@ export default function Login() {
                     />
                   </div>
                 )}
-
                 <div className="login-modal-form-group">
                   <button className="login-modal-submit-btn">
                     {hasAccount ? "Login" : "Register"}
