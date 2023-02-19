@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-test-deploy/static/css/main.9dfdf9cb.css",
-    "main.js": "/react-test-deploy/static/js/main.97e63548.js",
+    "main.js": "/react-test-deploy/static/js/main.45d03087.js",
     "static/media/network-cables.jpg": "/react-test-deploy/static/media/network-cables.9e322f2957cd8a6b6e4d.jpg",
     "static/media/networking.svg": "/react-test-deploy/static/media/networking.bdea87004732c3c4f49c19a79350143e.svg",
     "index.html": "/react-test-deploy/index.html",
     "main.9dfdf9cb.css.map": "/react-test-deploy/static/css/main.9dfdf9cb.css.map",
-    "main.97e63548.js.map": "/react-test-deploy/static/js/main.97e63548.js.map"
+    "main.45d03087.js.map": "/react-test-deploy/static/js/main.45d03087.js.map"
   },
   "entrypoints": [
     "static/css/main.9dfdf9cb.css",
-    "static/js/main.97e63548.js"
+    "static/js/main.45d03087.js"
   ]
 }
