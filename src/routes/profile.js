@@ -5,7 +5,11 @@ export default function Profile() {
   return (
     <>
       <Login />
-      <section id="profile">Profile Page</section>
+      <section id="profile">
+        <div className="profile-container">
+          <div className="profile-header">My Profile</div>
+        </div>
+      </section>
     </>
   );
 }

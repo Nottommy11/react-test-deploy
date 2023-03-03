@@ -14,7 +14,9 @@ import ErrorPage from "./routes/error";
 import "./index.css";
 import "./styles/gridCards.css";
 import "./styles/flashcards.css";
+import "./styles/quizzes.css";
 import "./styles/about.css";
+import "./styles/profile.css";
 
 function AppLayout() {
   return (

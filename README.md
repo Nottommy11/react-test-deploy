@@ -11,6 +11,7 @@
 	- [Outline](#outline)
 		- [Concepts Covered](#concepts-covered)
 		- [Minimum Viable Product](#minimum-viable-product)
+		- [Assigned Tasks](#assigned-tasks)
 		- [Hopes \& Dreams](#hopes--dreams)
 		- [Further Documentation](#further-documentation)
 			- [Commands](#commands)
@@ -52,6 +53,24 @@ Users are able to:
 - [ ] Choose quizzes based on level and concept
 - [X] Learn about this project in the About section
 - [X] Learn who to contact for this project
+
+---
+
+### Assigned Tasks
+<div name="assigned-tasks"/>
+
+This section outlines what tasks have been assigned to members.
+
+Thomas:
+- [ ] Set up posting Registration data
+- [ ] Design the front of games
+- [ ] Create the Quizzes
+
+Dakota:
+- [ ] Set up Posting of Login data for registration
+- [ ] MongoDB side of Login data
+- [ ] Pseudo code for the game
+- [ ] Pseudo code for the quiz
 
 ---
 
